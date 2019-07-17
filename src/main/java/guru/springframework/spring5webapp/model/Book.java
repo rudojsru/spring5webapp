@@ -13,6 +13,7 @@ public class Book {
     private String publisher;
 
     @ManyToMany
+    @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"))
     private Set<Author> authors = new HashSet<>();
 
 
